@@ -1,0 +1,173 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .main{
+        background-color: black;
+        color: aquamarine;
+        text-align: center;
+        /* display: flex; */
+    }
+    .box1{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+    }
+    .c1{
+        border-color: rgb(255, 44, 213);
+        border-style: dashed;
+        height: 50px;
+        width: 200px;
+    }
+    .c2{
+        border-color: rgb(255, 44, 213);
+        border-style: dashed;
+        height: 50px;
+        width: 200px;
+    }
+    .box2{
+        display: flex;
+        justify-content: center;
+        color: azure;
+    }
+
+    .pa{
+        border-color: rgb(255, 44, 213);
+        border-style: dashed;
+        height: 400px;
+        width: 400px;
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: repeat(20, 1fr);
+    }
+    .tile {
+        border: 1px solid gray;
+    }
+    .snake {
+    background-color: rgb(3, 255, 3);
+    }
+
+    .food {
+    background-color: red;
+    /* border-radius: 50%; */
+    }
+    .game-over {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 320px;
+    padding: 40px;
+
+    background-color: black;
+    color: aquamarine;
+
+    border: 3px dashed rgb(255, 44, 213);
+
+    text-align: center;
+
+    z-index: 1000;
+    }
+
+    .control-btn {
+    background-color: black;
+    color: aquamarine;
+    border: 2px solid aquamarine;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+    }
+
+    .control-btn:hover {
+    background-color: aquamarine;
+    color: black;
+    transform: scale(1.05);
+    }
+    
+    .control-btn:active {
+    transform: scale(0.95);
+    }
+    
+    .goal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+        }
+
+    .goal-panel {
+    width: 320px;
+    padding: 40px;
+
+    background-color: black;
+    color: aquamarine;
+
+    border: 3px dashed rgb(255, 44, 213);
+    text-align: center;
+    }
+
+    .goal-panel button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    border-radius: 8px;
+    }
+
+    .goal-panel button:first-of-type {
+    background-color: aquamarine;
+    color: black;
+    border: 2px solid aquamarine;
+    }
+
+    .goal-panel button:last-of-type {
+    background-color: black;
+    color: aquamarine;
+    border: 2px solid aquamarine;
+    }
+
+    .game-over button {
+    background-color: black;
+    color: aquamarine;
+    border: 2px solid aquamarine;
+
+    padding: 10px 25px;
+    margin-top: 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    border-radius: 8px;
+
+    transition: 0.2s;
+    }
+
+    .game-over button:hover {
+    background-color: aquamarine;
+    color: black;
+    transform: scale(1.05);
+    }
+
+    .game-over button:active {
+    transform: scale(0.95);
+    }

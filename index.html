@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The New Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vuex@4"></script>
+</head>
+<body>
+    <div class="main">
+        <div v-if="gameOver" class="game-over">
+            <h1>GAME OVER</h1>
+            <h2>Score: {{ Score }}</h2>
+            <button @click="restartGame">
+                RESTART
+            </button>
+        </div>
+        <div v-if="goalPanel" class="goal-overlay">
+            <div class="goal-panel">
+                <h2>🎉 GOAL COMPLETE!</h2>
+                    <p>You found the secret message!</p>
+                    <h2>{{ secretMessage }}</h2>
+                    
+                 <button @click="continuePlaying">
+                    CONTINUE PLAYING
+                </button>
+                <button @click="restartGame">
+                    RESTART
+                </button>
+            </div>
+        </div>
+        <h1>Welcome to the Jungle</h1>
+        <br>
+        <h2>Play this and reveal the secret message</h2>
+        <br>
+        <div class="box1">
+            <!-- <button @click="moveSnake">Move</button>    -->
+            <div class="c1">
+                <h2>Total Score : {{Score}}</h2>
+                <h3>Goal Score : {{ messageIndex === secretMessage.length ? "✓" : secretMessage.length }}</h3>
+     
+                <!-- <h1>{{Score}}</h1> -->
+            </div>
+            <div class="c2">
+                <button class="control-btn" @click="toggleGame">
+                    {{ !started ? "PLAY" : (paused ? "RESUME" : "PAUSE") }}
+                </button>
+                <!-- <h2>The message : {{message}}</h2>  -->
+                <!-- <h1>{{message}}</h1> -->
+            </div>
+        </div>
+        <br>
+        <div class="box2">
+            
+            <div class="pa">
+                <div class="tile"
+                v-for="n in tiles"
+                :class="{
+                    snake: isSnakeTile(n),
+                    food: isFoodTile(n)
+                }"></div>
+            </div>
+        </div>
+        <br>
+        <div class="box3">
+            <h3>Design and Developed by IITIAN ANSH GAUTAM</h3>
+            <h3>Instagram : anshgautam91 </h3>
+            <!-- <h3>For his friend RADHIKA DAGAR</h3> -->
+        </div>
+        
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
