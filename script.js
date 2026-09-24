@@ -148,6 +148,10 @@ createApp({
             this.direction = 'RIGHT';
             this.gameOver = false;
 
+            this.started = false;
+            this.paused = false;
+            this.goalPanel = false;
+
             this.generateFood();
         },
         toggleGame() {
