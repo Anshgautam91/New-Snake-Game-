@@ -4,7 +4,7 @@ createApp({
         return {
             Score: 0,
             message: "",
-            secretMessage:"hello",
+            secretMessage:"You are Cute 🐼",
             messageIndex: 0,
             tiles:400,
             snake: [
